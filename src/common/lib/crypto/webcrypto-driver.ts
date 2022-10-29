@@ -8,10 +8,10 @@ export default class WebCryptoDriver implements CryptoInterface {
   public readonly hashAlgorithm = "sha256";
   public readonly driver: SubtleCrypto;
 
-  // constructor() {
-  //   if (!this.detectWebCrypto()) {
-  //     throw new Error("SubtleCrypto not available!");
-  //   }
+  constructor() {
+    if (!this.detectWebCrypto()) {
+      // throw new Error("SubtleCrypto not available!");
+    }
 
     this.driver = crypto.subtle;
   }
